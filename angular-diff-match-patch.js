@@ -76,11 +76,10 @@ angular.module('diff-match-patch', [])
 			var retVal = '';
 				switch(display) {
 					case displayType.LINEDIFF:
-						retVal = '<div class="'+diffClass(op)+'"><span' + getTagAttrs(options, op, {'class': 'noselect'}) + '>'+diffSymbol(op)+'</span>';
+							retVal = '<div class="'+diffClass(op)+'"><span' + getTagAttrs(options, op, {'class': 'noselect'}) + '>'+diffSymbol(op)+'</span>';
 						break;
 					case displayType.INSDEL:
 						var tag = diffTag(op);
-
 						retVal = '<' + tag + getTagAttrs(options, op) + '>';
 						break;
 				}
@@ -120,13 +119,24 @@ angular.module('diff-match-patch', [])
 					.replace(pattern_gt, '&gt;');
 				diffs[x][1] = text;
 			}
-		
+
 			var html = [];
 			for (var x = 0; x < diffs.length; x++) {
 				var op = diffs[x][0];
 				var text = diffs[x][1];
+				var contextText="";
 				if (display === displayType.LINEDIFF) {
-					html[x] = createHtmlLines(text, op, options);
+					if(typeof (options.contextSize) != 'undefined' && options.contextSize >0){
+						if(diffClass(op)=='match'){
+							contextText = text.split("\n");
+							if(contextText.length > options.contextSize*2){
+								context = []
+								context = context.concat(contextText.slice(0,options.contextSize+1),[options.elipsis],contextText.slice(context.length-(options.contextSize-1)));
+								text = context.join('\n');
+							}
+						}
+					}
+					html[x] = createHtmlLines(text, op, options, x);
 				} else {
 					html[x] = getHtmlPrefix(op, display, options) + text + getHtmlSuffix(op, display);
 				}
@@ -178,6 +188,7 @@ angular.module('diff-match-patch', [])
 					var a = dmp.diff_linesToChars_(left, right);
 					var diffs = dmp.diff_main(a.chars1, a.chars2, false);
 					dmp.diff_charsToLines_(diffs, a.lineArray);
+					console.log(diffs);
 					return createHtmlFromDiffs(diffs, displayType.LINEDIFF, options);
 				} else {
 					return '';

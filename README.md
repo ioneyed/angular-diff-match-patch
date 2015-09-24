@@ -1,8 +1,8 @@
 angular-diff-match-patch
 ========================
-[![Build Status](https://travis-ci.org/amweiss/angular-diff-match-patch.svg?branch=master)](https://travis-ci.org/amweiss/angular-diff-match-patch) [![Coverage Status](https://coveralls.io/repos/amweiss/angular-diff-match-patch/badge.png)](https://coveralls.io/r/amweiss/angular-diff-match-patch)
+[![Build Status](https://travis-ci.org/ioneyed/angular-diff-match-patch.svg?branch=master)](https://travis-ci.org/ioneyed/angular-diff-match-patch) [![Coverage Status](https://coveralls.io/repos/ioneyed/angular-diff-match-patch/badge.png)](https://coveralls.io/r/ioneyed/angular-diff-match-patch)
 
-[![Dependencies](https://david-dm.org/amweiss/angular-diff-match-patch.svg)](https://david-dm.org/amweiss/angular-diff-match-patch/#info=dependencies&view=table) [![DevDependencies](https://david-dm.org/amweiss/angular-diff-match-patch/dev-status.svg)](https://david-dm.org/amweiss/angular-diff-match-patch/#info=devDependencies&view=table) [![PeerDependencies](https://david-dm.org/amweiss/angular-diff-match-patch/peer-status.svg)](https://david-dm.org/amweiss/angular-diff-match-patch/#info=peerDependencies&view=table)
+[![Dependencies](https://david-dm.org/ioneyed/angular-diff-match-patch.svg)](https://david-dm.org/ioneyed/angular-diff-match-patch/#info=dependencies&view=table) [![DevDependencies](https://david-dm.org/ioneyed/angular-diff-match-patch/dev-status.svg)](https://david-dm.org/ioneyed/angular-diff-match-patch/#info=devDependencies&view=table) [![PeerDependencies](https://david-dm.org/ioneyed/angular-diff-match-patch/peer-status.svg)](https://david-dm.org/ioneyed/angular-diff-match-patch/#info=peerDependencies&view=table)
 
 This library is simply a wrapper around [google-diff-match-patch](https://code.google.com/p/google-diff-match-patch/).
 
@@ -18,7 +18,7 @@ Install from [Bower](http://bower.io/)
 Usage
 -----
 
-See [this demo](http://amweiss.github.io/angular-diff-match-patch/) for reference, and click the button to view it in [Plunker](http://plnkr.co/)
+See [this demo](http://ioneyed.github.io/angular-diff-match-patch/) for reference, and click the button to view it in [Plunker](http://plnkr.co/)
 
 Development
 -----
