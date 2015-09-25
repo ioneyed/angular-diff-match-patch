@@ -131,7 +131,7 @@ angular.module('diff-match-patch', [])
 							contextText = text.split("\n");
 							if(contextText.length > options.contextSize*2){
 								context = []
-								context = context.concat(contextText.slice(0,options.contextSize+1),[options.elipsis],contextText.slice(context.length-(options.contextSize-1)));
+								context = context.concat(contextText.slice(0,options.contextSize+1),[options.elipsis],contextText.slice(context.length-(options.contextSize+1));
 								text = context.join('\n');
 							}
 						}
