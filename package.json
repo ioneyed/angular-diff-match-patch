@@ -2,11 +2,11 @@
   "name": "angular-diff-match-patch",
   "author": "Adam Weiss <cseadam@gmail.com>",
   "license": "MIT",
-  "version": "0.1.11",
+  "version": "0.1.12",
   "description": "An Angular module to use when dealing with google-diff-match-patch.",
   "private": true,
   "repository": {
-    "url": "https://github.com/amweiss/angular-diff-match-patch.git"
+    "url": "https://github.com/ioneyed/angular-diff-match-patch.git"
   },
   "devDependencies": {
     "http-server": "^0.8",
